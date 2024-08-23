@@ -39,7 +39,7 @@ python -m pip install --upgrade keyboard
 python -m pip install --upgrade sounddevice
 python -m pip install --upgrade numpy
 python -m pip install --upgrade configparser
-python -m pip install --upgrade bootstrap   
+python -m pip install --upgrade bootstrap-py
 python -m pip install --upgrade wheel   
 python -m pip install --upgrade pyinstaller
 
