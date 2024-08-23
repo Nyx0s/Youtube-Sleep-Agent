@@ -187,7 +187,7 @@ def monitor_video():
         full_screen_windows = check_full_screen_applications()
         if full_screen_windows:
             full_screen_windows_context = [win32gui.GetWindowText(hWnd) for hWnd in full_screen_windows]
-            if "YouTube - Brave" in str(full_screen_windows_context):
+            if "YouTube" in str(full_screen_windows_context):
                 time_in_fullscreen = 0
                 while time_in_fullscreen < INACTIVITY_TIMEOUT:
                     clear_terminal()
