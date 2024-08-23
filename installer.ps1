@@ -65,7 +65,7 @@ python -m pip install pyinstaller
 
 # Bundle the script into an executable using PyInstaller
 Write-Host "Bundling the script into an executable..."
-pyinstaller --onefile --add-data ":\config.ini;." --icon=your_icon.ico --windowed ".\main.py"
+pyinstaller --onefile --add-data "venv/;venv/." --add-data "config.ini/;config.ini/." --icon=your_icon.ico --windowed ".\main.py"
 
 # Start the Python script
 Write-Host "Starting the Python script..."

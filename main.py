@@ -3,13 +3,13 @@
 # DESCRIPTION: This script monitors the full-screen applications on the system and performs actions based on the detected application. Specifically, it checks if the YouTube application is running in full-screen mode and monitors its activity. If there is no activity for a specified timeout period, it exits the full-screen mode. Additionally, it provides options to lock the workstation or shut down the system based on certain conditions.
 
 from ctypes import windll
-import win32gui
+import win32gui 
 import time
-import pyautogui
-import keyboard
+import pyautogui 
+import keyboard 
 import os
-import sounddevice as sd
-import numpy as np
+import sounddevice as sd 
+import numpy as np 
 import configparser
 
 

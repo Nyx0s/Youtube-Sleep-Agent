@@ -14154,3 +14154,4 @@ App/venv/Scripts/pywin32_testall.py
 App/venv/Scripts/wheel.exe
 App/venv/Scripts/__pycache__/pywin32_postinstall.cpython-312.pyc
 App/venv/Scripts/__pycache__/pywin32_testall.cpython-312.pyc
+.vscode/settings.json

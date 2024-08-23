@@ -3,3 +3,4 @@ keyboard==0.13.5
 sounddevice==0.4.3
 numpy==1.21.0
 configparser==5.0.2
+pywin32==306
