@@ -10,21 +10,14 @@ import keyboard
 import os
 import sounddevice as sd 
 import numpy as np 
-import configparser
 
-
-# Load configuration
-config = configparser.ConfigParser()
-config.read('config.ini')
-
-# Configs
-INACTIVITY_TIMEOUT = config.getint('settings', 'INACTIVITY_TIMEOUT')  # Time in seconds to wait for inactivity before exiting full-screen mode
-ISRUNNING = config.getboolean('settings', 'ISRUNNING')  # Set to False to stop the actions of the script
-KILLFULLSCREEN = config.getboolean('settings', 'KILLFULLSCREEN')  # Set to False to disable exiting full-screen mode
-LOCKWORKSTATION = config.getboolean('settings', 'LOCKWORKSTATION') # Set to True to enable locking the workstation
-SHUTDOWN =  config.getboolean('settings', 'SHUTDOWN') # Set to True to enable shutting down the workstation
-KEEPRUNNING = config.getboolean('settings', 'KEEPRUNNING') # Set to False to stop the script after the first iteration
-AUDIO_THRESHOLD = config.getint('settings', 'AUDIO_THRESHOLD')  # Threshold for detecting if sound is playing (adjust based on environment)
+INACTIVITY_TIMEOUT = 5
+ISRUNNING = True
+KILLFULLSCREEN = True
+LOCKWORKSTATION = False
+SHUTDOWN = False
+KEEPRUNNING = True
+AUDIO_THRESHOLD = 100
 
 def clear_terminal():
     """
@@ -183,6 +176,7 @@ def monitor_video():
     Returns:
         None
     """
+    
     while ISRUNNING:
         full_screen_windows = check_full_screen_applications()
         if full_screen_windows:
